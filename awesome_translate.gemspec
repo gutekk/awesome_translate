@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.name          = "awesome_translate"
   spec.version       = AwesomeTranslate::VERSION
   spec.authors       = ["gutekk"]
-  spec.email         = ["lukasz.ostrowski@polcode.net"]
+  spec.email         = ["gutekk@live.com"]
   spec.summary       = %q{Ruby interface to Microsoft Translator.}
   spec.description   = %q{Ruby interface to Microsoft Translator.}
   spec.homepage      = "https://github.com/gutekk/awesome_translate"
@@ -21,4 +21,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.7"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency 'rspec'
+  spec.add_development_dependency 'nokogiri'
 end
