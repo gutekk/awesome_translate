@@ -3,7 +3,6 @@ describe '.configure' do
     it "should set the #{key}" do
       AwesomeTranslate.configure do |config|
         config.send("#{key}=", key)
-        puts "ok"
         expect(AwesomeTranslate.send(key)).to eq key
       end
     end
