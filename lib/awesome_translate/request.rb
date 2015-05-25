@@ -2,6 +2,8 @@ require 'uri'
 require 'net/http'
 require 'net/https'
 require 'json'
+require 'nokogiri'
+require 'cgi'
 
 module AwesomeTranslate
 
@@ -14,20 +16,22 @@ module AwesomeTranslate
 
     def post(params)
       response = https.post(token_uri.path, URI.encode_www_form(params))
-      # unless response.code == '200'
-      #   raise "err"
-      # end
+      unless response.code == '200'
+        raise AuthenticationException.new(response)
+      end
       JSON.parse(response.body)
     end
 
     def get(params)
+      @access_token = AccessTokenAuthentication.new.get_access_token
+      raise NoAccessTokenException unless @access_token
       request = Net::HTTP::Get.new([uri.request_uri, URI.encode_www_form(params)].join('?'))
-      request.initialize_http_header({'Authorization' => "Bearer #{t['access_token']}"})
+      request.initialize_http_header({'Authorization' => "Bearer #{@access_token['access_token']}"})
       response = http.request(request)
-      # unless response.code == '200'
-      #   raise "err"
-      # end
-      JSON.parse(response.body)
+      unless response.code == '200'
+        raise TranslationException.new(response)
+      end
+      CGI::unescapeHTML(Nokogiri::HTML(response.body).xpath('//string/text()').to_s)
     end
 
     private
