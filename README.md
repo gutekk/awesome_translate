@@ -21,10 +21,24 @@ Or install it yourself as:
 
     $ gem install awesome_translate
 
+## Configuration
+```
+AwesomeTranslate.configure do |config|
+  config.client_secret  = '< YOUR CLIENT SECRET >'
+  config.client_id      = '< YOUR CLIENT ID >'
+end
+```
+
 ## Usage
 
 ```ruby
-AwesomeTranslate.translate("hello", from: :en, to: :es)
+AwesomeTranslate.translate("hello!", from: :en, to: :es)
+=> "Hola!"
+```
+or 
+```ruby
+AwesomeTranslate.translate("hello!", to: :es)
+=> "Hola!"
 ```
 
 ## Contributing
