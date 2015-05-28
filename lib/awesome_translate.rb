@@ -10,9 +10,3 @@ module AwesomeTranslate
   extend Configuration
 
 end
-
-#This for initialize/awesome_translate.rb or something
-AwesomeTranslate.configure do |config|
-  config.client_secret  = 'cMbthG5J9bjPUv7pHzPwtHztx5oqYOjR70Oo39Opy3g='
-  config.client_id      = 'awesome-translate-93610'
-end

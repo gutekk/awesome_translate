@@ -23,7 +23,6 @@ module AwesomeTranslate
     end
 
     def get(params)
-      @access_token = AccessTokenAuthentication.new.get_access_token
       raise NoAccessTokenException unless @access_token
       request = Net::HTTP::Get.new([uri.request_uri, URI.encode_www_form(params)].join('?'))
       request.initialize_http_header({'Authorization' => "Bearer #{@access_token['access_token']}"})

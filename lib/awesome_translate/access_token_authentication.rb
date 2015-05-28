@@ -1,18 +1,17 @@
 module AwesomeTranslate
 
-  class AccessTokenAuthentication
-    attr_accessor :access_token
+  class << self
 
-    def get_access_token
-      return access_token if access_token_valid?
+    def access_token
+      return @access_token if access_token_valid?
       atar = AccessTokenAuthenticationRequest.new 
-      self.access_token = atar.request_access_token
+      @access_token = atar.request_access_token
     end
 
     def access_token_valid?
-      access_token && access_token['expires_in'] > Time.now
+      @access_token && @access_token['expires_in'] > Time.now
     end
- 
+
   end
 
   class AccessTokenAuthenticationRequest < AwesomeTranslate::Request
