@@ -41,7 +41,7 @@ AwesomeTranslate.translate("hello!", to: :es)
 => "Hola!"
 ```
 
-[![Code Climate](https://codeclimate.com/github/gutekk/awesome_translate/badges/gpa.svg)]
+![Code Climate](https://codeclimate.com/github/gutekk/awesome_translate/badges/gpa.svg)
 ## Contributing
 
 1. Fork it ( https://github.com/gutekk/awesome_translate/fork )
