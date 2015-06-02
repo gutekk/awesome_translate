@@ -5,6 +5,8 @@ Ruby interface to Microsoft Translator
 Signing up for Microsoft Translator and getting your credentials, please visit:
 http://blogs.msdn.com/b/translation/p/gettingstarted1.aspx
 
+[![Code Climate](https://codeclimate.com/github/gutekk/awesome_translate/badges/gpa.svg)](https://codeclimate.com/github/gutekk/awesome_translate)
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -41,7 +43,6 @@ AwesomeTranslate.translate("hello!", to: :es)
 => "Hola!"
 ```
 
-![Code Climate](https://codeclimate.com/github/gutekk/awesome_translate/badges/gpa.svg)
 ## Contributing
 
 1. Fork it ( https://github.com/gutekk/awesome_translate/fork )
