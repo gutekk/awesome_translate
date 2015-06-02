@@ -6,6 +6,7 @@ Signing up for Microsoft Translator and getting your credentials, please visit:
 http://blogs.msdn.com/b/translation/p/gettingstarted1.aspx
 
 [![Code Climate](https://codeclimate.com/github/gutekk/awesome_translate/badges/gpa.svg)](https://codeclimate.com/github/gutekk/awesome_translate)
+[![Test Coverage](https://codeclimate.com/github/gutekk/awesome_translate/badges/coverage.svg)](https://codeclimate.com/github/gutekk/awesome_translate/coverage)
 
 ## Installation
 
